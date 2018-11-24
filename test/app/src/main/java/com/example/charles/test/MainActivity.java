@@ -25,12 +25,6 @@ public class MainActivity extends AppCompatActivity {
         if (player1 == null) {
             player1 = MediaPlayer.create(this, R.raw.song);
             player1.setLooping(true);
-            //player1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            //   @Override
-            //    public void onCompletion(MediaPlayer mp) {
-            //       stopPlayer();
-            //   }
-            //});
         }
 
         player1.start();
@@ -40,12 +34,6 @@ public class MainActivity extends AppCompatActivity {
         if (player2 == null) {
             player2 = MediaPlayer.create(this, R.raw.high_freak);
             player2.setLooping(true);
-            //player2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            //    @Override
-            //   public void onCompletion(MediaPlayer mp) {
-            //        stopPlayer();
-            //    }
-            //});
         }
 
         player2.start();
@@ -55,12 +43,6 @@ public class MainActivity extends AppCompatActivity {
         if (player3 == null) {
             player3 = MediaPlayer.create(this, R.raw.mid_freak);
             player3.setLooping(true);
-            //player3.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            //    @Override
-            //   public void onCompletion(MediaPlayer mp) {
-            //        stopPlayer();
-            //    }
-            //});
         }
 
         player3.start();
