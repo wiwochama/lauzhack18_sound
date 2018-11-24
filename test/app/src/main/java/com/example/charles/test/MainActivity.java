@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void play1(View v) {
+        //play the first track after having checked if it needed initialization
         if (player1 == null) {
             player1 = MediaPlayer.create(this, R.raw.song);
             player1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -63,13 +64,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void start_music(View v){
-
+        //start the music in the three tracks
         play1(v);
         play2(v);
         play3(v);
     }
 
     public void pause(View v) {
+        //pause the music
         if (player1 != null) {
             player1.pause();
         }
@@ -108,4 +110,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         stopPlayer();
     }
+
+
 }
