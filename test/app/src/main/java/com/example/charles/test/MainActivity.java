@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
     //mock data functions
     double getHeartRate() { return 160; }
-    double getStepPerMin() { return 160; }
+    double getStepPerMin() { return 180; }
 
     //VARIABLES
     private static double step_objective;
-    { step_objective = 160; }
+    { step_objective = 180; }
     private static double HR_objective;
     { HR_objective = 160; }
     private static double integration_time;
@@ -104,12 +104,7 @@ public class MainActivity extends AppCompatActivity {
         //play the first track after having checked if it needed initialization
         if (bass_player == null) {
             bass_player = MediaPlayer.create(this, R.raw.bass_freak);
-            bass_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    stopPlayer();
-                }
-            });
+            bass_player.setLooping(true);
             bass_player.setVolume(bass_volume, bass_volume);
 
         }
@@ -118,12 +113,7 @@ public class MainActivity extends AppCompatActivity {
     public void play2(View v) {
         if (high_player == null) {
             high_player = MediaPlayer.create(this, R.raw.high_freak);
-            high_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    stopPlayer();
-                }
-            });
+            high_player.setLooping(true);
             high_player.setVolume(high_volume, high_volume);
 
         }
@@ -132,12 +122,7 @@ public class MainActivity extends AppCompatActivity {
     public void play3(View v) {
         if (mid_player == null) {
             mid_player = MediaPlayer.create(this, R.raw.mid_freak);
-            mid_player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    stopPlayer();
-                }
-            });
+            mid_player.setLooping(true);
             float mid_volume = (high_volume+bass_volume)/2;
             mid_player.setVolume(mid_volume, mid_volume);
 
