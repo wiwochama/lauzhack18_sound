@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Music Pace
             PlaybackParams plbParam = new PlaybackParams();
-            plbParam.setSpeed((float)step_objective/150);
+            plbParam.setSpeed((float)step_objective/160);
 
             //Music Transformation :D
             if (bass_player != null) {
@@ -173,11 +173,6 @@ public class MainActivity extends AppCompatActivity {
             mid_player.pause();
         }
     }
-
-    // Adaptive music routine
-
-
-
 
     public void stop(View v) {
         stopPlayer();
